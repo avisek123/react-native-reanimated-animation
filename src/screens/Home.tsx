@@ -20,6 +20,14 @@ const Home = () => {
         navigate('InterPolet');
       },
     },
+
+    {
+      id: 4,
+      name: 'Instagram Double Tab Like',
+      onPress: () => {
+        navigate('InstGramAnimation');
+      },
+    },
   ];
   return (
     <SafeAreaView style={styles.container}>

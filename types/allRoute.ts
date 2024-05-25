@@ -5,6 +5,8 @@ export type MainStackParams = {
   Home?: undefined;
   Spring?: undefined;
   InterPolet?: undefined;
+  Dragble?: undefined;
+  InstGramAnimation: undefined;
 };
 
 export type MainNavigationProps = NativeStackNavigationProp<MainStackParams>;
