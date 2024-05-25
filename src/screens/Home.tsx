@@ -8,13 +8,6 @@ const Home = () => {
   const data = [
     {
       id: 1,
-      name: 'Spring Animation',
-      onPress: () => {
-        navigate('Spring');
-      },
-    },
-    {
-      id: 2,
       name: 'Interpolate Animation',
       onPress: () => {
         navigate('InterPolet');
@@ -23,7 +16,7 @@ const Home = () => {
 
     {
       id: 4,
-      name: 'Instagram Double Tab Like',
+      name: 'Instagram Double Tap Like',
       onPress: () => {
         navigate('InstGramAnimation');
       },
