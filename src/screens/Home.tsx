@@ -21,6 +21,13 @@ const Home = () => {
         navigate('InstGramAnimation');
       },
     },
+    {
+      id: 5,
+      name: 'Search Animation',
+      onPress: () => {
+        navigate('SearchAnimation');
+      },
+    },
   ];
   return (
     <SafeAreaView style={styles.container}>

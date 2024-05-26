@@ -6,6 +6,7 @@ import Spring from '../../animations/Spring';
 import InterPolet from '../screens/InterPolet';
 import Dragble from '../screens/Dragble';
 import InstaGramAnimation from '../screens/InstaGramAnimation';
+import SearchAnimation from '../screens/SearchAnimation';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {
@@ -16,6 +17,7 @@ const MainStack = () => {
       <Stack.Screen name="InterPolet" component={InterPolet} />
       <Stack.Screen name="Dragble" component={Dragble} />
       <Stack.Screen name="InstGramAnimation" component={InstaGramAnimation} />
+      <Stack.Screen name="SearchAnimation" component={SearchAnimation} />
     </Stack.Navigator>
   );
 };
