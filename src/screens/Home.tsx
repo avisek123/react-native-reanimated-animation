@@ -43,6 +43,13 @@ const Home = () => {
         navigate('TabAnimation');
       },
     },
+    {
+      id: 6,
+      name: 'Number Vibrate Animation',
+      onPress: () => {
+        navigate('NumberVibrateAnimation');
+      },
+    },
   ];
   return (
     <SafeAreaView style={styles.container}>

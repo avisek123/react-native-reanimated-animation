@@ -9,6 +9,7 @@ import InstaGramAnimation from '../screens/InstaGramAnimation';
 import SearchAnimation from '../screens/SearchAnimation';
 import AnimatedButton from '../screens/AnimatedButton';
 import TabAnimation from '../screens/TabAnimation';
+import NumberVibrateAnimation from '../screens/NumberVibrateAnimation';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {
@@ -22,6 +23,10 @@ const MainStack = () => {
       <Stack.Screen name="SearchAnimation" component={SearchAnimation} />
       <Stack.Screen name="AnimatedButton" component={AnimatedButton} />
       <Stack.Screen name="TabAnimation" component={TabAnimation} />
+      <Stack.Screen
+        name="NumberVibrateAnimation"
+        component={NumberVibrateAnimation}
+      />
     </Stack.Navigator>
   );
 };

@@ -10,6 +10,7 @@ export type MainStackParams = {
   SearchAnimation: undefined;
   AnimatedButton: undefined;
   TabAnimation: undefined;
+  NumberVibrateAnimation: undefined;
 };
 
 export type MainNavigationProps = NativeStackNavigationProp<MainStackParams>;
