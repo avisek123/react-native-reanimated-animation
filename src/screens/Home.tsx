@@ -35,6 +35,14 @@ const Home = () => {
         navigate('AnimatedButton');
       },
     },
+
+    {
+      id: 5,
+      name: 'Tab Animation',
+      onPress: () => {
+        navigate('TabAnimation');
+      },
+    },
   ];
   return (
     <SafeAreaView style={styles.container}>

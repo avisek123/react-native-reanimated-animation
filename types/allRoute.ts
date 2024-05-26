@@ -9,6 +9,7 @@ export type MainStackParams = {
   InstGramAnimation: undefined;
   SearchAnimation: undefined;
   AnimatedButton: undefined;
+  TabAnimation: undefined;
 };
 
 export type MainNavigationProps = NativeStackNavigationProp<MainStackParams>;

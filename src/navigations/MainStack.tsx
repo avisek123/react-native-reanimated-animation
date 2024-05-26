@@ -8,6 +8,7 @@ import Dragble from '../screens/Dragble';
 import InstaGramAnimation from '../screens/InstaGramAnimation';
 import SearchAnimation from '../screens/SearchAnimation';
 import AnimatedButton from '../screens/AnimatedButton';
+import TabAnimation from '../screens/TabAnimation';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {
@@ -20,6 +21,7 @@ const MainStack = () => {
       <Stack.Screen name="InstGramAnimation" component={InstaGramAnimation} />
       <Stack.Screen name="SearchAnimation" component={SearchAnimation} />
       <Stack.Screen name="AnimatedButton" component={AnimatedButton} />
+      <Stack.Screen name="TabAnimation" component={TabAnimation} />
     </Stack.Navigator>
   );
 };
