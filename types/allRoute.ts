@@ -8,6 +8,7 @@ export type MainStackParams = {
   Dragble?: undefined;
   InstGramAnimation: undefined;
   SearchAnimation: undefined;
+  AnimatedButton: undefined;
 };
 
 export type MainNavigationProps = NativeStackNavigationProp<MainStackParams>;

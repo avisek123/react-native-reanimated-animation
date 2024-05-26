@@ -15,22 +15,47 @@ const Home = () => {
     },
 
     {
-      id: 4,
+      id: 2,
       name: 'Instagram Double Tap Like',
       onPress: () => {
         navigate('InstGramAnimation');
       },
     },
     {
-      id: 5,
+      id: 3,
       name: 'Search Animation',
       onPress: () => {
         navigate('SearchAnimation');
       },
     },
+    {
+      id: 4,
+      name: 'Button Loading Animation',
+      onPress: () => {
+        navigate('AnimatedButton');
+      },
+    },
   ];
   return (
     <SafeAreaView style={styles.container}>
+      <Text
+        style={{
+          alignSelf: 'center',
+          fontSize: 25,
+          color: '#000',
+          fontWeight: 'bold',
+        }}>
+        Animation Using
+      </Text>
+      <Text
+        style={{
+          alignSelf: 'center',
+          fontSize: 25,
+          color: '#000',
+          fontWeight: 'bold',
+        }}>
+        React Native Reanimated
+      </Text>
       {data?.map(item => (
         <TouchableOpacity
           onPress={item?.onPress}
