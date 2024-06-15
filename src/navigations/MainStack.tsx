@@ -10,6 +10,7 @@ import SearchAnimation from '../screens/SearchAnimation/SearchAnimation';
 import AnimatedButton from '../screens/AnimatedLoaderButton/AnimatedButton';
 import TabAnimation from '../screens/TabAnimation/TabAnimation';
 import NumberVibrateAnimation from '../screens/NumberVibrateAnimation/NumberVibrateAnimation';
+import Skeleton from '../screens/SkeletonLoader/Skeleton';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {
@@ -23,6 +24,7 @@ const MainStack = () => {
       <Stack.Screen name="SearchAnimation" component={SearchAnimation} />
       <Stack.Screen name="AnimatedButton" component={AnimatedButton} />
       <Stack.Screen name="TabAnimation" component={TabAnimation} />
+      <Stack.Screen name="Sekeleton" component={Skeleton} />
       <Stack.Screen
         name="NumberVibrateAnimation"
         component={NumberVibrateAnimation}

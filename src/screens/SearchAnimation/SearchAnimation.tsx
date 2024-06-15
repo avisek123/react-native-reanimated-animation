@@ -24,12 +24,7 @@ const SearchAnimation = () => {
     };
   });
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+    <View style={styles.wrapper}>
       <Animated.View
         style={[
           {
@@ -45,6 +40,7 @@ const SearchAnimation = () => {
         <TextInput
           style={{
             width: '85%',
+            paddingLeft: 10,
           }}
           placeholder="Search here"
         />
@@ -84,6 +80,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#0f41a4',
   },
   searchIcon: {
     backgroundColor: '#fff',

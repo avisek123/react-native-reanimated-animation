@@ -6,7 +6,6 @@ import Animated, {
   useAnimatedRef,
   useAnimatedScrollHandler,
   useSharedValue,
-  withTiming,
 } from 'react-native-reanimated';
 import {ScrollDirection, listToObject} from './utilies';
 
@@ -15,7 +14,7 @@ import {SONGS} from './data';
 import {MovableSong} from './MovableSong';
 
 const SONG_HEIGHT = 70;
-const SCROLL_HEIGHT_THRESHOLD = SONG_HEIGHT;
+
 export default function SortableList() {
   const positions = useSharedValue(listToObject(SONGS));
   const scrollY = useSharedValue(0);

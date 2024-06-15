@@ -44,9 +44,16 @@ const Home = () => {
     },
     {
       id: 6,
-      name: 'Drag',
+      name: 'Draggble Animation',
       onPress: () => {
         navigate('Dragble');
+      },
+    },
+    {
+      id: 7,
+      name: 'Skeleton Loader Animation',
+      onPress: () => {
+        navigate('Sekeleton');
       },
     },
   ];

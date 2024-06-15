@@ -11,6 +11,7 @@ export type MainStackParams = {
   AnimatedButton: undefined;
   TabAnimation: undefined;
   NumberVibrateAnimation: undefined;
+  Sekeleton: undefined;
 };
 
 export type MainNavigationProps = NativeStackNavigationProp<MainStackParams>;

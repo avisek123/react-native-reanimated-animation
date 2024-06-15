@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {Platform} from 'react-native';
+import {Dimensions, Platform} from 'react-native';
 import Animated, {
   clamp,
   runOnJS,
@@ -12,13 +12,12 @@ import Animated, {
   withSpring,
   withTiming,
 } from 'react-native-reanimated';
-
 import {PanGestureHandler} from 'react-native-gesture-handler';
 import {Song} from './Song';
 import {objectMove} from './utilies';
 
 const SONG_HEIGHT = 70;
-const SCROLL_HEIGHT_THRESHOLD = SONG_HEIGHT;
+const SONG_MARGIN = 10; // Margin between songs
 
 interface Song {
   id: string;
@@ -32,7 +31,7 @@ enum ScrollDirection {
   Up,
   Down,
 }
-/* eslint-disable jsdoc/require-jsdoc */
+
 export function MovableSong({
   id,
   artist,
@@ -55,8 +54,10 @@ export function MovableSong({
   songsCount: number;
 }) {
   const [moving, setMoving] = useState(false);
-  const positionY = useSharedValue(positions.value[id] * SONG_HEIGHT);
-  const top = useSharedValue(positions.value[id] * SONG_HEIGHT);
+  const positionY = useSharedValue(
+    positions.value[id] * (SONG_HEIGHT + SONG_MARGIN),
+  );
+  const top = useSharedValue(positions.value[id] * (SONG_HEIGHT + SONG_MARGIN));
   const upperBound = useDerivedValue(() => lowerBound.value + containerHeight);
   const targetLowerBound = useSharedValue(lowerBound.value);
 
@@ -68,11 +69,6 @@ export function MovableSong({
         previousValue !== null &&
         positionYValue !== previousValue
       ) {
-        console.log(
-          `positionY changed. ${
-            previousValue ?? ''
-          } ${positionYValue} id: ${id}`,
-        );
         if (moving) {
           top.value = positionYValue;
           setPosition(positionYValue, songsCount, positions, id);
@@ -88,7 +84,6 @@ export function MovableSong({
     },
   );
 
-  // If another item is moving and changes this ones position, move to new position.
   useAnimatedReaction(
     () => positions.value[id],
     (currentPosition, previousPosition) => {
@@ -97,20 +92,14 @@ export function MovableSong({
         previousPosition !== null &&
         currentPosition !== previousPosition
       ) {
-        console.log(
-          `positions.value[id] changed. ${
-            previousPosition ?? ''
-          } ${currentPosition} id: ${id}`,
-        );
         if (!moving) {
-          top.value = withSpring(currentPosition * SONG_HEIGHT);
+          top.value = withSpring(currentPosition * (SONG_HEIGHT + SONG_MARGIN));
         }
       }
     },
     [moving],
   );
 
-  // If moving and scrolling, update position y.
   useAnimatedReaction(
     () => lowerBound.value,
     (currentLowerBound, previousLowerBound) => {
@@ -120,11 +109,6 @@ export function MovableSong({
         currentLowerBound !== previousLowerBound &&
         moving
       ) {
-        console.log(
-          `lowerBound changed. ${
-            previousLowerBound ?? ''
-          } ${currentLowerBound} id: ${id}`,
-        );
         const diff = previousLowerBound - currentLowerBound;
         positionY.value -= diff;
       }
@@ -132,7 +116,6 @@ export function MovableSong({
     [moving],
   );
 
-  // When the autoScrollDirection changes, set the target lower bound with timing.
   useAnimatedReaction(
     () => autoScrollDirection.value,
     (scrollDirection, previousValue) => {
@@ -141,11 +124,6 @@ export function MovableSong({
         previousValue !== null &&
         scrollDirection !== previousValue
       ) {
-        console.log(
-          `scrollDirection changed: ${
-            previousValue ?? ''
-          } ${scrollDirection} id: ${id}`,
-        );
         switch (scrollDirection) {
           case ScrollDirection.Up: {
             targetLowerBound.value = lowerBound.value;
@@ -153,7 +131,7 @@ export function MovableSong({
             break;
           }
           case ScrollDirection.Down: {
-            const contentHeight = songsCount * SONG_HEIGHT;
+            const contentHeight = songsCount * (SONG_HEIGHT + SONG_MARGIN);
             const maxScroll = contentHeight - containerHeight;
 
             targetLowerBound.value = lowerBound.value;
@@ -169,7 +147,6 @@ export function MovableSong({
     },
   );
 
-  // When the target lower bound changes, update the lower bound value.
   useAnimatedReaction(
     () => targetLowerBound.value,
     (targetLowerBoundValue, previousValue) => {
@@ -178,11 +155,6 @@ export function MovableSong({
         previousValue !== null &&
         targetLowerBoundValue !== previousValue
       ) {
-        console.log(
-          `targetLowerBound changed. ${
-            previousValue ?? ''
-          } ${targetLowerBoundValue} id: ${id}`,
-        );
         if (moving) {
           lowerBound.value = targetLowerBoundValue;
         }
@@ -192,19 +164,14 @@ export function MovableSong({
 
   const gestureHandler = useAnimatedGestureHandler({
     onStart() {
-      positionY.value = positions.value[id] * SONG_HEIGHT;
+      positionY.value = positions.value[id] * (SONG_HEIGHT + SONG_MARGIN);
       runOnJS(setMoving)(true);
-
-      if (Platform.OS === 'ios') {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-        //runOnJS(Haptics.impactAsync)(Haptics.ImpactFeedbackStyle.Medium);
-      }
     },
     onActive(event) {
       positionY.value = event.absoluteY + lowerBound.value - SONG_HEIGHT;
     },
     onFinish() {
-      const finishPosition = positions.value[id] * SONG_HEIGHT;
+      const finishPosition = positions.value[id] * (SONG_HEIGHT + SONG_MARGIN);
       top.value = withTiming(finishPosition);
       runOnJS(setMoving)(false);
     },
@@ -229,16 +196,19 @@ export function MovableSong({
 
   return (
     <Animated.View style={animatedStyle}>
-      {/* <BlurView intensity={moving ? 100 : 0} tint="light"> */}
       <PanGestureHandler onGestureEvent={gestureHandler}>
-        <Animated.View style={{maxWidth: '80%'}}>
+        <Animated.View
+          style={{
+            maxWidth: '100%',
+            marginHorizontal: 20,
+          }}>
           <Song artist={artist} cover={cover} title={title} />
         </Animated.View>
       </PanGestureHandler>
-      {/* </BlurView> */}
     </Animated.View>
   );
 }
+
 function setPosition(
   positionY: number,
   songsCount: number,
@@ -247,7 +217,7 @@ function setPosition(
 ) {
   'worklet';
   const newPosition = clamp(
-    Math.floor(positionY / SONG_HEIGHT),
+    Math.floor(positionY / (SONG_HEIGHT + SONG_MARGIN)),
     0,
     songsCount - 1,
   );
@@ -258,11 +228,6 @@ function setPosition(
       positions.value[id],
       newPosition,
     );
-
-    if (Platform.OS === 'ios') {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-      // runOnJS(Haptics.impactAsync)(Haptics.ImpactFeedbackStyle.Light);
-    }
   }
 }
 
