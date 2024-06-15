@@ -8,7 +8,7 @@ import {
 
 import {useCallback, useState} from 'react';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
-import {useVibration} from '../hooks/useVibration';
+import {useVibration} from './hooks/useVibration';
 
 export default function App() {
   const [count, setCount] = useState(0);

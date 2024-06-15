@@ -62,8 +62,8 @@ const SearchAnimation = () => {
           <Image
             source={
               val === 0
-                ? require('../assets/image/search-icon.png')
-                : require('../assets/image/close.png')
+                ? require('./assets/search-icon.png')
+                : require('./assets/close.png')
             }
             style={{
               width: 30,

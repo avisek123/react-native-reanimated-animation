@@ -4,12 +4,12 @@ import {MainStackParams} from '../../types/allRoute';
 import Home from '../screens/Home';
 import Spring from '../../animations/Spring';
 import InterPolet from '../screens/InterPolet';
-import Dragble from '../screens/Dragble';
-import InstaGramAnimation from '../screens/InstaGramAnimation';
-import SearchAnimation from '../screens/SearchAnimation';
-import AnimatedButton from '../screens/AnimatedButton';
-import TabAnimation from '../screens/TabAnimation';
-import NumberVibrateAnimation from '../screens/NumberVibrateAnimation';
+import Dragble from '../screens/DraggableAnimation/Dragble';
+import InstaGramAnimation from '../screens/InstagramDoubleTapAnimation/InstaGramAnimation';
+import SearchAnimation from '../screens/SearchAnimation/SearchAnimation';
+import AnimatedButton from '../screens/AnimatedLoaderButton/AnimatedButton';
+import TabAnimation from '../screens/TabAnimation/TabAnimation';
+import NumberVibrateAnimation from '../screens/NumberVibrateAnimation/NumberVibrateAnimation';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {

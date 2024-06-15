@@ -8,28 +8,20 @@ const Home = () => {
   const data = [
     {
       id: 1,
-      name: 'Interpolate Animation',
-      onPress: () => {
-        navigate('InterPolet');
-      },
-    },
-
-    {
-      id: 2,
       name: 'Instagram Double Tap Like',
       onPress: () => {
         navigate('InstGramAnimation');
       },
     },
     {
-      id: 3,
+      id: 2,
       name: 'Search Animation',
       onPress: () => {
         navigate('SearchAnimation');
       },
     },
     {
-      id: 4,
+      id: 3,
       name: 'Button Loading Animation',
       onPress: () => {
         navigate('AnimatedButton');
@@ -37,17 +29,24 @@ const Home = () => {
     },
 
     {
-      id: 5,
+      id: 4,
       name: 'Tab Animation',
       onPress: () => {
         navigate('TabAnimation');
       },
     },
     {
-      id: 6,
+      id: 5,
       name: 'Number Vibrate Animation',
       onPress: () => {
         navigate('NumberVibrateAnimation');
+      },
+    },
+    {
+      id: 6,
+      name: 'Drag',
+      onPress: () => {
+        navigate('Dragble');
       },
     },
   ];

@@ -51,10 +51,10 @@ const InstaGramAnimation = () => {
           onActivated={DoubleTap}>
           <Animated.View>
             <ImageBackground
-              source={require('../assets/image/img.png')}
+              source={require('./assets/img.png')}
               style={styles.ImgBg}>
               <ImageComponent
-                source={require('../assets/image/heart-icon-14.png')}
+                source={require('./assets/heart-icon-14.png')}
                 style={[
                   {
                     width: 80,
