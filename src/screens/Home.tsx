@@ -56,6 +56,13 @@ const Home = () => {
         navigate('Sekeleton');
       },
     },
+    {
+      id: 8,
+      name: 'Animated Toast',
+      onPress: () => {
+        navigate('AnimatedToastScreen');
+      },
+    },
   ];
   return (
     <SafeAreaView style={styles.container}>

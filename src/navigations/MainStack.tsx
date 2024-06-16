@@ -11,6 +11,7 @@ import AnimatedButton from '../screens/AnimatedLoaderButton/AnimatedButton';
 import TabAnimation from '../screens/TabAnimation/TabAnimation';
 import NumberVibrateAnimation from '../screens/NumberVibrateAnimation/NumberVibrateAnimation';
 import Skeleton from '../screens/SkeletonLoader/Skeleton';
+import AnimatedToastScreen from '../screens/AnimatedToast/AnimatedToastScreen';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {
@@ -28,6 +29,10 @@ const MainStack = () => {
       <Stack.Screen
         name="NumberVibrateAnimation"
         component={NumberVibrateAnimation}
+      />
+      <Stack.Screen
+        name="AnimatedToastScreen"
+        component={AnimatedToastScreen}
       />
     </Stack.Navigator>
   );

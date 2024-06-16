@@ -19,3 +19,11 @@
 # Swipe to delete Animation
 
 # Pull to Refresh Animation
+
+# dynamic tab
+
+# Floating button
+
+# Uploading button
+
+# toast message

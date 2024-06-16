@@ -45,7 +45,6 @@ export default function App() {
       </Animated.Text>
       <View style={styles.buttonsContainer}>
         <TouchableOpacity style={styles.button} onPress={onDecrement}>
-          {/* <Entypo name="minus" size={32} color="white" /> */}
           <Text
             style={{
               fontSize: 32,
