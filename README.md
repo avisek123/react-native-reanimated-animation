@@ -4,7 +4,7 @@
 
 # Loader Button
 
-# Draggble Animation
+# Drag and Drop Animation
 
 # Tab Animation
 
