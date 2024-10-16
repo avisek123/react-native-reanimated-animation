@@ -6,6 +6,8 @@ This repository is a collection of custom animations using **[React Native Reani
 
 ---
 
+# 📱 Preview
+
 ## **✨ Features**
 
 - 🌀 **Smooth Native Animations**: Offloads animations to the native thread for flawless performance.
