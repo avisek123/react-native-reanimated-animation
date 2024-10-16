@@ -9,7 +9,6 @@ This repository is a collection of custom animations using **[React Native Reani
 ## **✨ Features**
 
 - 🌀 **Smooth Native Animations**: Offloads animations to the native thread for flawless performance.
-- 🔁 **Reusable Logic**: Contains hooks and utilities to simplify animation management across components.
 - 🖱️ **Gesture-Based Animations**: Integrates well with gestures using `react-native-gesture-handler`.
 - 📱 **Performance Optimized**: Avoids frame drops for complex animations.
 - 🛠️ **Custom Easing Functions**: Includes advanced easing curves like `Easing.bezier`.
