@@ -12,6 +12,7 @@ import TabAnimation from '../screens/TabAnimation/TabAnimation';
 import NumberVibrateAnimation from '../screens/NumberVibrateAnimation/NumberVibrateAnimation';
 import Skeleton from '../screens/SkeletonLoader/Skeleton';
 import AnimatedToastScreen from '../screens/AnimatedToast/AnimatedToastScreen';
+import Fab from '../screens/Fab/Fab';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {
@@ -34,6 +35,7 @@ const MainStack = () => {
         name="AnimatedToastScreen"
         component={AnimatedToastScreen}
       />
+      <Stack.Screen name="Fab" component={Fab} />
     </Stack.Navigator>
   );
 };

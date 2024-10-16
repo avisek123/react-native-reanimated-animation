@@ -63,6 +63,13 @@ const Home = () => {
         navigate('AnimatedToastScreen');
       },
     },
+    {
+      id: 9,
+      name: 'Fab Button',
+      onPress: () => {
+        navigate('Fab');
+      },
+    },
   ];
   return (
     <SafeAreaView style={styles.container}>
