@@ -1,5 +1,27 @@
-🚀 Overview
-This repository serves as a centralized hub for all custom animations built with React Native Reanimated. Whether you are developing seamless UI transitions, sophisticated gesture-based animations, or performance-optimized animated components, this repository contains reusable, scalable, and efficient animation logic tailored specifically for React Native applications.
+# **🎨 React Native Reanimated Animation Repository**
+
+## **🚀 Overview**
+
+This repository is a collection of custom animations using **[React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)**. It provides optimized, reusable logic for animations, gesture-based transitions, and smooth UI experiences tailored for React Native applications.
+
+---
+
+## **✨ Features**
+
+- 🌀 **Smooth Native Animations**: Offloads animations to the native thread for flawless performance.
+- 🔁 **Reusable Logic**: Contains hooks and utilities to simplify animation management across components.
+- 🖱️ **Gesture-Based Animations**: Integrates well with gestures using `react-native-gesture-handler`.
+- 📱 **Performance Optimized**: Avoids frame drops for complex animations.
+- 🛠️ **Custom Easing Functions**: Includes advanced easing curves like `Easing.bezier`.
+
+---
+
+## **📦 Installation**
+
+1. Add the `react-native-reanimated` library to your project:
+   ```bash
+   yarn add react-native-reanimated react-native-gesture-handler
+   ```
 
 # Double Tap Like
 
