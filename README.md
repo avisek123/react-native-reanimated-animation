@@ -33,6 +33,24 @@ This repository is a collection of custom animations using **[React Native Reani
 - **TypeScript**: A strongly typed programming language that builds on JavaScript, enhancing code quality and maintainability.
 - **Yarn**: A package manager that helps manage project dependencies efficiently.
 
+## **🔧 Installation**
+
+Follow these steps to get started with this repository:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/react-native-reanimated-animation.git
+   cd react-native-reanimated-animation
+
+   ```
+
+2. **Install dependencies:**
+
+```bash
+   yarn install
+
+
 # Double Tap Like
 
 # Search Animation
@@ -64,3 +82,4 @@ This repository is a collection of custom animations using **[React Native Reani
 # toast message
 
 ![WhatsApp Image 2024-09-19 at 7 49 24 PM](https://github.com/user-attachments/assets/d5af07bd-46b7-40b7-a945-4b06e6c90288)
+```
