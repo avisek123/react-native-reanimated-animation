@@ -49,6 +49,17 @@ Follow these steps to get started with this repository:
 
 ```bash
    yarn install
+```
+
+3. **Enable Reanimated in babel.config.js:**
+   ```bash
+   module.exports = {
+   presets: ['module:metro-react-native-babel-preset'],
+   plugins: ['react-native-reanimated/plugin'],
+   };
+
+```
+
 
 
 # Double Tap Like
