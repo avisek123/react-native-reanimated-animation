@@ -30,7 +30,7 @@ This repository is a collection of custom animations using **[React Native Reani
 - **React Native**: A framework for building native applications using React.
 - **React Native Reanimated v3+**: A library for creating smooth animations and transitions in React Native.
 - **React Native Gesture Handler**: A library that provides better gesture handling capabilities than the default React Native gesture system.
-- **TypeScript**: A strongly typed programming language that builds on JavaScript, enhancing code quality and maintainability. _(if applicable)_
+- **TypeScript**: A strongly typed programming language that builds on JavaScript, enhancing code quality and maintainability.
 - **Yarn**: A package manager that helps manage project dependencies efficiently.
 
 # Double Tap Like
