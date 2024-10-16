@@ -19,6 +19,7 @@ This repository is a collection of custom animations using **[React Native Reani
 ## **📦 Installation**
 
 1. Add the `react-native-reanimated` library to your project:
+
    ```bash
    yarn add react-native-reanimated react-native-gesture-handler
    ```
