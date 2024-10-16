@@ -35,36 +35,30 @@ const Home = () => {
         navigate('TabAnimation');
       },
     },
+
     {
       id: 5,
-      name: 'Number Vibrate Animation',
-      onPress: () => {
-        navigate('NumberVibrateAnimation');
-      },
-    },
-    {
-      id: 6,
       name: 'Draggble Animation',
       onPress: () => {
         navigate('Dragble');
       },
     },
     {
-      id: 7,
+      id: 6,
       name: 'Skeleton Loader Animation',
       onPress: () => {
         navigate('Sekeleton');
       },
     },
     {
-      id: 8,
+      id: 7,
       name: 'Animated Toast',
       onPress: () => {
         navigate('AnimatedToastScreen');
       },
     },
     {
-      id: 9,
+      id: 8,
       name: 'Fab Button',
       onPress: () => {
         navigate('Fab');
