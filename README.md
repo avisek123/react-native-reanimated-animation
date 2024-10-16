@@ -58,6 +58,19 @@ Follow these steps to get started with this repository:
    };
    ```
 
+## **📋 Best Practices**
+
+- **Use Shared Values:** Store and manipulate animation values using `useSharedValue`.
+- **Performance Optimization:** Offload heavy animations using native threads through Reanimated.
+- **Test Animations Separately:** Use `renderHook` and `act` for testing hooks like animations.
+- **Modular Animations:** Organize animation logic into hooks or utility files to enhance reusability.
+
+## **🤝 Contributing**
+
+Contributions are welcome! If you have any ideas or improvements, feel free to open a pull request or submit an issue.
+
+Please ensure your code follows the existing style and passes all tests.
+
 # Double Tap Like
 
 # Search Animation
