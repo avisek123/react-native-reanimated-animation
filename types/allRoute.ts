@@ -25,6 +25,7 @@ export type MainStackParams = {
   Accordian: undefined;
   Fab_One: undefined;
   Chip: any;
+  Fab_Two: undefined;
 };
 
 export type MainNavigationProps = NativeStackNavigationProp<MainStackParams>;

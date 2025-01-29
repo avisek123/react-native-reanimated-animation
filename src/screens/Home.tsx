@@ -99,6 +99,13 @@ const Home = () => {
         navigate('Chip');
       },
     },
+    {
+      id: 13,
+      name: 'Floating Button 2',
+      onPress: () => {
+        navigate('Fab_Two');
+      },
+    },
   ];
   return (
     <SafeAreaView style={styles.container}>

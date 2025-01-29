@@ -18,6 +18,7 @@ import ChangeTheme from '../screens/ChangeTheme/ChangeTheme';
 import Accordian from '../screens/Accordian/Accordian';
 import Fab_One from '../screens/Fab_One/Fab_One';
 import Chip from '../screens/Chip/Chip';
+import Fab_Two from '../screens/Fab_Two.tsx/Fab_Two';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {
@@ -46,6 +47,7 @@ const MainStack = () => {
       <Stack.Screen name="Accordian" component={Accordian} />
       <Stack.Screen name="Fab_One" component={Fab_One} />
       <Stack.Screen name="Chip" component={Chip} />
+      <Stack.Screen name="Fab_Two" component={Fab_Two} />
     </Stack.Navigator>
   );
 };
