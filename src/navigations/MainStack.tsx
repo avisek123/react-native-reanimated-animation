@@ -15,6 +15,9 @@ import AnimatedToastScreen from '../screens/AnimatedToast/AnimatedToastScreen';
 import Fab from '../screens/Fab/Fab';
 
 import ChangeTheme from '../screens/ChangeTheme/ChangeTheme';
+import Accordian from '../screens/Accordian/Accordian';
+import Fab_One from '../screens/Fab_One/Fab_One';
+import Chip from '../screens/Chip/Chip';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {
@@ -40,6 +43,9 @@ const MainStack = () => {
       <Stack.Screen name="Fab" component={Fab} />
 
       <Stack.Screen name="ChangeTheme" component={ChangeTheme} />
+      <Stack.Screen name="Accordian" component={Accordian} />
+      <Stack.Screen name="Fab_One" component={Fab_One} />
+      <Stack.Screen name="Chip" component={Chip} />
     </Stack.Navigator>
   );
 };

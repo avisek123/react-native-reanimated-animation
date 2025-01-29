@@ -1,6 +1,12 @@
 import {RouteProp} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {CuisineType} from '../src/screens/Chip/constant';
 
+type CuisinesListProps = {
+  title: string;
+  cuisines: CuisineType[];
+  onPressItem: (id: number) => void;
+};
 export type MainStackParams = {
   Home?: undefined;
   Spring?: undefined;
@@ -16,6 +22,9 @@ export type MainStackParams = {
   Fab: undefined;
   CustomDrawerScreen: undefined;
   ChangeTheme: undefined;
+  Accordian: undefined;
+  Fab_One: undefined;
+  Chip: any;
 };
 
 export type MainNavigationProps = NativeStackNavigationProp<MainStackParams>;

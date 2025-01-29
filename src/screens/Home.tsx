@@ -1,4 +1,10 @@
-import {SafeAreaView, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {MainNavigationProps} from '../../types/allRoute';
@@ -6,70 +12,91 @@ import {MainNavigationProps} from '../../types/allRoute';
 const Home = () => {
   const {navigate} = useNavigation<MainNavigationProps>();
   const data = [
-    {
-      id: 1,
-      name: 'Instagram Double Tap Like',
-      onPress: () => {
-        navigate('InstGramAnimation');
-      },
-    },
-    {
-      id: 2,
-      name: 'Search Animation',
-      onPress: () => {
-        navigate('SearchAnimation');
-      },
-    },
-    {
-      id: 3,
-      name: 'Button Loading Animation',
-      onPress: () => {
-        navigate('AnimatedButton');
-      },
-    },
+    // {
+    //   id: 1,
+    //   name: 'Instagram Double Tap Like',
+    //   onPress: () => {
+    //     navigate('InstGramAnimation');
+    //   },
+    // },
+    // {
+    //   id: 2,
+    //   name: 'Search Animation',
+    //   onPress: () => {
+    //     navigate('SearchAnimation');
+    //   },
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Button Loading Animation',
+    //   onPress: () => {
+    //     navigate('AnimatedButton');
+    //   },
+    // },
 
-    {
-      id: 4,
-      name: 'Tab Animation',
-      onPress: () => {
-        navigate('TabAnimation');
-      },
-    },
+    // {
+    //   id: 4,
+    //   name: 'Tab Animation',
+    //   onPress: () => {
+    //     navigate('TabAnimation');
+    //   },
+    // },
 
-    {
-      id: 5,
-      name: 'Draggble Animation',
-      onPress: () => {
-        navigate('Dragble');
-      },
-    },
-    {
-      id: 6,
-      name: 'Skeleton Loader Animation',
-      onPress: () => {
-        navigate('Sekeleton');
-      },
-    },
-    {
-      id: 7,
+    // {
+    //   id: 5,
+    //   name: 'Draggble Animation',
+    //   onPress: () => {
+    //     navigate('Dragble');
+    //   },
+    // },
+    // {
+    //   id: 6,
+    //   name: 'Skeleton Loader Animation',
+    //   onPress: () => {
+    //     navigate('Sekeleton');
+    //   },
+    // },
+    // {
+    //   id: 7,
 
-      name: 'Animated Toast',
-      onPress: () => {
-        navigate('AnimatedToastScreen');
-      },
-    },
-    {
-      id: 8,
-      name: 'Fab Button',
-      onPress: () => {
-        navigate('Fab');
-      },
-    },
+    //   name: 'Animated Toast',
+    //   onPress: () => {
+    //     navigate('AnimatedToastScreen');
+    //   },
+    // },
+    // {
+    //   id: 8,
+    //   name: 'Fab Button',
+    //   onPress: () => {
+    //     navigate('Fab');
+    //   },
+    // },
     {
       id: 9,
-      name: 'Change Theme',
+      name: 'Accordian',
+      onPress: () => {
+        navigate('Accordian');
+      },
+    },
+    {
+      id: 10,
+      name: 'Theme',
       onPress: () => {
         navigate('ChangeTheme');
+      },
+    },
+    {
+      id: 11,
+      name: 'Floating Button 1',
+      onPress: () => {
+        navigate('Fab_One');
+      },
+    },
+    {
+      id: 12,
+      name: 'Chip Component',
+      onPress: () => {
+        navigate('Chip');
       },
     },
   ];
@@ -93,16 +120,21 @@ const Home = () => {
         }}>
         React Native Reanimated
       </Text>
-      {data?.map(item => (
-        <TouchableOpacity
-          onPress={item?.onPress}
-          style={styles.buttonWrapper}
-          key={item?.id}>
-          <Text style={styles.btnText}>
-            {item?.id}. {''} {''} {item?.name}
-          </Text>
-        </TouchableOpacity>
-      ))}
+      <ScrollView
+        contentContainerStyle={{
+          paddingBottom: 30,
+        }}>
+        {data?.map(item => (
+          <TouchableOpacity
+            onPress={item?.onPress}
+            style={styles.buttonWrapper}
+            key={item?.id}>
+            <Text style={styles.btnText}>
+              {item?.id}. {''} {''} {item?.name}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
     </SafeAreaView>
   );
 };
