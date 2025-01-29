@@ -6,40 +6,6 @@ export interface MessageType {
   message: string;
 }
 
-export interface DrawerListType {
-  name: string;
-  icon: ImageSourcePropType;
-  navigate: string;
-}
-
-export const drawerList: DrawerListType[] = [
-  {
-    name: 'My Profile',
-    icon: require('../assets/MyProfile.png'),
-    navigate: 'MyProfile',
-  },
-  {
-    name: 'Contacts',
-    icon: require('../assets/Contact.png'),
-    navigate: 'Contacts',
-  },
-  {
-    name: 'Calls',
-    icon: require('../assets/Phone.png'),
-    navigate: 'Calls',
-  },
-  {
-    name: 'Saved Message',
-    icon: require('../assets/Saved.png'),
-    navigate: 'SavedMessage',
-  },
-  {
-    name: 'Settings',
-    icon: require('../assets/Setting.png'),
-    navigate: 'Settings',
-  },
-];
-
 export const message: MessageType[] = [];
 
 const profileImages: ImageSourcePropType[] = [

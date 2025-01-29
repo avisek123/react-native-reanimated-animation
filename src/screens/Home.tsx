@@ -52,6 +52,7 @@ const Home = () => {
     },
     {
       id: 7,
+
       name: 'Animated Toast',
       onPress: () => {
         navigate('AnimatedToastScreen');
@@ -61,7 +62,14 @@ const Home = () => {
       id: 8,
       name: 'Fab Button',
       onPress: () => {
-        navigate('CustomDrawerScreen');
+        navigate('Fab');
+      },
+    },
+    {
+      id: 9,
+      name: 'Change Theme',
+      onPress: () => {
+        navigate('ChangeTheme');
       },
     },
   ];

@@ -8,10 +8,7 @@ This repository is a collection of custom animations using **[React Native Reani
 
 # 📱 Preview
 
-
 https://github.com/user-attachments/assets/c70c505f-55e5-4f11-b942-43fa1f5b8132
-
-
 
 ## **✨ Features**
 
@@ -87,6 +84,6 @@ Avisek
 ![WhatsApp Image 2024-09-19 at 7 49 24 PM](https://github.com/user-attachments/assets/d5af07bd-46b7-40b7-a945-4b06e6c90288)
 
 // Swipeble Rows
-// Dynamic Tab
-// Accordian
+// Dark Theme
 // animation drawer
+// Accordian

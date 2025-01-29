@@ -14,6 +14,7 @@ import Skeleton from '../screens/SkeletonLoader/Skeleton';
 import AnimatedToastScreen from '../screens/AnimatedToast/AnimatedToastScreen';
 import Fab from '../screens/Fab/Fab';
 import CustomDrawerScreen from '../screens/CustomDrawerScreen/CustomDrawerScreen';
+import ChangeTheme from '../screens/ChangeTheme/ChangeTheme';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 const MainStack = () => {
@@ -38,6 +39,7 @@ const MainStack = () => {
       />
       <Stack.Screen name="Fab" component={Fab} />
       <Stack.Screen name="CustomDrawerScreen" component={CustomDrawerScreen} />
+      <Stack.Screen name="ChangeTheme" component={ChangeTheme} />
     </Stack.Navigator>
   );
 };

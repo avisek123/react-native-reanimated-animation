@@ -15,6 +15,7 @@ export type MainStackParams = {
   AnimatedToastScreen: undefined;
   Fab: undefined;
   CustomDrawerScreen: undefined;
+  ChangeTheme: undefined;
 };
 
 export type MainNavigationProps = NativeStackNavigationProp<MainStackParams>;
