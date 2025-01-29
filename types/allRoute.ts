@@ -14,6 +14,7 @@ export type MainStackParams = {
   Sekeleton: undefined;
   AnimatedToastScreen: undefined;
   Fab: undefined;
+  CustomDrawerScreen: undefined;
 };
 
 export type MainNavigationProps = NativeStackNavigationProp<MainStackParams>;

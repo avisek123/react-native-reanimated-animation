@@ -61,7 +61,7 @@ const Home = () => {
       id: 8,
       name: 'Fab Button',
       onPress: () => {
-        navigate('Fab');
+        navigate('CustomDrawerScreen');
       },
     },
   ];
